@@ -110,7 +110,5 @@ class Native1Activity : AppCompatActivity(), PageNotifyListener {
         setContentView(R.layout.activity_native)
         initView()
     }
-
-
 }
 

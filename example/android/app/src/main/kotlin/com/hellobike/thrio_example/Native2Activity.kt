@@ -6,7 +6,15 @@ import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.hellobike.flutter.thrio.navigator.RouteSettings
 import com.hellobike.flutter.thrio.navigator.ThrioNavigator
-import kotlinx.android.synthetic.main.activity_native.*
+import kotlinx.android.synthetic.main.activity_native.btn_10
+import kotlinx.android.synthetic.main.activity_native.btn_11
+import kotlinx.android.synthetic.main.activity_native.btn_12
+import kotlinx.android.synthetic.main.activity_native.btn_13
+import kotlinx.android.synthetic.main.activity_native.btn_20
+import kotlinx.android.synthetic.main.activity_native.btn_21
+import kotlinx.android.synthetic.main.activity_native.btn_3
+import kotlinx.android.synthetic.main.activity_native.tv_native
+import kotlinx.android.synthetic.main.activity_native2.*
 
 class Native2Activity : AppCompatActivity() {
 
@@ -66,6 +74,10 @@ class Native2Activity : AppCompatActivity() {
 
         btn_3.setOnClickListener {
             ThrioNavigator.pop("native 2 popResult")
+        }
+
+        btn_1.setOnClickListener {
+            ThrioNavigator.notify("/biz1/flutter1", name = "page1Notify", params = mapOf( 1 to 2 ))
         }
     }
 
